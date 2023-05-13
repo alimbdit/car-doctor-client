@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
-import { AuthContext } from "../../../providers/AuthProvider";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const CheckOut = () => {
   const service = useLoaderData();
@@ -27,7 +27,7 @@ const CheckOut = () => {
       img
     };
 
-    fetch("http://localhost:5000/booking", {
+    fetch("https://car-doctor-server-beta-nine.vercel.app/booking", {
       method: "POST",
       headers: {
         "content-type": "application/json",
